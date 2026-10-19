@@ -1,0 +1,19 @@
+# Secrets: keep .env.example, ignore everything else
+.env
+.env.*
+!.env.example
+
+# Owner's data: local DB, imports, exports. Never committed.
+personal-data/*
+!personal-data/README.md
+
+# Dependencies and build output
+node_modules/
+dist/
+.next/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
