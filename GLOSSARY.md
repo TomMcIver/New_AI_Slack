@@ -17,12 +17,30 @@ An AI reached through an API or CLI that takes part in the room and can read and
 _Avoid_: Bot, AI (when the API/CLI kind is meant)
 
 **Chat app**:
-A consumer AI product the owner talks to directly (claude.ai, chatgpt.com, grok.com). The hub cannot message it; it joins the hub only through imports or connectors.
+A consumer AI product the owner talks to directly (claude.ai, chatgpt.com, grok.com, the Grok Bot app). The hub cannot message it; it joins the hub only through handovers, imports or connectors.
 _Avoid_: Bot, agent
 
 **Room**:
 The shared conversation where the owner speaks to all agents at once and they read each other.
 _Avoid_: Channel, thread
+
+**Pass**:
+An agent's choice not to speak after a message. Costs almost nothing and is not shown in the room.
+_Avoid_: Skip, ignore
+
+**Held question**:
+A question an agent wants to ask but could not, because it hit its round cap or budget. The owner decides whether to let it go ahead.
+_Avoid_: Blocked question, pending question
+
+## Getting information in
+
+**Handover**:
+One large prompt the owner gives a chat app so it writes down everything it knows about a subject, which the owner pastes back into the hub.
+_Avoid_: Dump, export (an export is a file, see Import)
+
+**Import**:
+A chat-history export file the owner places in the imports folder for agents to read through and discuss. Imports produce proposals, never claims directly.
+_Avoid_: Upload, sync
 
 ## Ground truth
 
